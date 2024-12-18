@@ -50,10 +50,8 @@ if (bookingForm) {
 }
 
 // Redirect logic for missing authentication (e.g., accessing this page without login)
+// Set index.html as the homepage when clicking the link
 document.addEventListener('DOMContentLoaded', () => {
-    const loggedIn = localStorage.getItem('institute-id');
-    if (!loggedIn) {
-        alert('Please log in to access this page.');
-        window.location.href = 'login.html';  // Redirect to login page
-    }
+    window.location.href = 'index.html';  // Redirect to homepage (index.html)
+}
 });
