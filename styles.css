@@ -1,0 +1,423 @@
+body {
+    background-color: rgb(175, 242, 249);
+    color: rgb(96, 9, 9);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* styles.css */
+h1 {
+    text-align: center;
+    margin-top: 5%; /* Adjust as needed */
+}
+
+/* Center the container */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: vh; /* Full height of viewport */
+    overflow: hidden; /* Prevent unwanted scrolling */
+    font-family: Arial, sans-serif;
+    margin-top: 1px;
+}
+
+.center-container::after {
+    content: attr(data-text); /* Create an infinite loop effect */
+    animation: scroll-text 20s linear infinite; /* Animation to scroll text */
+    
+}
+
+/* Typewriter effect */
+#typewriter {
+    font-size: 40px;
+    border-right: 1px solid; /* Creates a cursor effect */
+    white-space: nowrap;
+    overflow: hidden; /* Hides content initially */
+    width: 0; /* Initially zero width */
+    /*animation: typing 5s steps(40, end), blink 0.75s step-end 6s; /* Adjust steps as needed */
+    animation: typing 5s steps(40) 50000000;
+    scrollLoop: 10s linear infinite;    
+    text-align: center;
+    accent-color: red;
+    
+}
+
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 38%;
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    5% {
+        border-color: transparent;
+    }
+}
+
+.headline{
+    color: red;
+    border-radius: 10px;
+    padding: 1px;
+    margin-top: 125px;
+}
+
+/* Button styling */
+.login-button {
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(96, 9, 9); /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: rgb(41, 193, 33); /* Hover effect */
+}
+
+.registration-button {
+    position: absolute;
+    top: 50px;  /* Adjust the vertical position as needed */
+    right: 180px;  /* Adjust the horizontal position to match the login button */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(41, 193, 33); /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registration-button:hover {
+    background-color: rgb(150, 0, 0); /* Hover effect */
+}
+
+/* Button styling */
+/* Form container styling */
+.registration-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: grid;
+    gap: 20px;
+}
+
+/* Form row styling to arrange input fields in a row */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Form group styling for individual input elements */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input styling */
+.registration-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+/* Register button styling */
+.registration-form button {
+    padding: 12px 30px;
+    background-color: rgb(34, 139, 34);
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded corners for a smoother look */
+    cursor: pointer;
+    width: 200px; /* Adjust width */
+    margin: 0 auto; /* Center the button */
+    display: block; /* Makes the margin: auto effective */
+    text-align: center; /* Centers the text within the button */
+    font-size: 16px; /* Larger font size for better readability */
+    font-weight: bold; /* Makes the text stand out */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for the Register button */
+.registration-form button:hover {
+    background-color: rgb(50, 205, 50); /* A brighter green on hover */
+    transform: translateY(-4px); /* Slight lift effect when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Active state when button is clicked */
+.registration-form button:active {
+    transform: translateY(2px); /* Slight push down effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Lighter shadow when clicked */
+}
+
+
+.login-form {
+    display: grid;
+    gap: 20px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form group and input field styling */
+.form-group {
+    position: center;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Login Button styling */
+/* Back to Home Button (Top Right) */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: rgb(96, 9, 9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: rgb(50, 205, 50);
+}
+.Test-platform{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: rgb(96, 9, 9);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+
+
+
+
+
+
+/* Submit Button Styling */
+.submit-button {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #34c759; /* Green color for the button */
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    width: 35%; /* Full width */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-top: 20px; /* Space above the button */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hover Effect: Glowing Effect */
+.submit-button:hover {
+    background-color: #28a745; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly grow the button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    animation: glow 1.5s infinite; /* Add glowing effect */
+}
+
+/* Active State: When Button is Pressed */
+.submit-button:active {
+    transform: scale(0.98); /* Slightly shrink when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+/* Glowing Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.6);
+    }
+}
+
+
+
+/* Product List Styling */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 25%;
+    margin: 10px;
+    text-align: center;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+}
+
+.book-button {
+    background-color: #34c759;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    background-color: #28a745;
+}
+
+/* Modal (Booking Form) Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#booking-form input,
+#booking-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+
+
+
+
+/* Success Message Styling */
+.success-message {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+.Purpose {
+    background-color: rgb(169, 225, 228);
+    padding: 10px;
+    border-radius: 2%;
+    margin-bottom: 10px;
+
+}
+
+
+.Goals {
+    background-color: rgb(169, 225, 228);
+    padding: 10px;
+    border-radius: 2%;
+
+
+}

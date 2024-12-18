@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Product Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to the Product Booking Page</h1>
+
+    <div class="button-container">
+        <!-- Back to Home Button (Top Right) -->
+        <button class="back-button" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+
+    <!-- Product Categories -->
+    <div class="product-list">
+        <div class="product">
+            <h2>Test Platform</h2>
+            <p>Details about Test Platform.</p>
+            <button class="book-button" onclick="openBookingForm('Test Platform')">Book Now</button>
+            <button class="book-button" onclick="openBookingForm('Digital Board Vendors')">Trial Tests</button>
+            
+        </div>
+
+        <div class="product">
+            <h2>Stationery Vendors</h2>
+            <p>Details about Stationery Vendors.</p>
+            <button class="book-button" onclick="openBookingForm('Stationery Vendors')">Book Now</button>
+        
+        </div>
+
+        <div class="product">
+            <h2>Digital Board Vendors</h2>
+            <p>Details about Digital Boards.</p>
+            <button class="book-button" onclick="openBookingForm('Digital Board Vendors')">Book Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Clothes Vendors</h2>
+            <p>Details about Clothes vendors.</p>
+            <button class="book-button" onclick="openBookingForm('Clothes Vendors')">Book Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Chair Vendors</h2>
+            <p>Details about Chair vendors.</p>
+            <button class="book-button" onclick="openBookingForm('Chair Vendors')">Book Now</button>
+        </div>
+
+        <div class="product">
+            <h2>Test Series Vendors</h2>
+            <p>Details about Test Series.</p>
+            <button class="book-button" onclick="openBookingForm('Test Series Vendors')">Book Now</button>
+        </div>
+    </div>
+
+    <!-- Booking Form Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>Book Product</h2>
+            <form id="booking-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" readonly>
+
+                <label for="institute-name">Institute Name:</label>
+                <input type="text" id="institute-name" name="institute-name" required>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact-number" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="requirements">Additional Requirements:</label>
+                <textarea id="requirements" name="requirements" required></textarea>
+
+                <button type="submit" class="submit-button">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

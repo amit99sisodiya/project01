@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateLogin(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Get input values
+            const instituteID = document.getElementById('institute-id').value;
+            const password = document.getElementById('password').value;
+
+            // Retrieve stored credentials from localStorage
+            const storedID = localStorage.getItem('institute-id');
+            const storedPassword = localStorage.getItem('password');
+
+            // Check if credentials are valid
+            if (instituteID === storedID && password === storedPassword) {
+                alert('Login successful');
+                // Redirect to institute.html
+                window.location.href = 'institute.html';
+            } else {
+                alert('Invalid Institute ID or Password. Please try again.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Back to Home Button (Top Right) -->
+    <button class="back-button" onclick="window.location.href='index.html'">Back to Home</button>
+
+    <h1>Institute Login</h1>
+
+    <!-- Login Form Container -->
+    <div class="center-container">
+        <form class="login-form" onsubmit="validateLogin(event)">
+            <!-- Institute ID Field -->
+            <div class="form-group">
+                <label for="institute-id">Institute ID</label>
+                <input type="text" id="institute-id" name="institute-id" required placeholder="Enter Institute ID">
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter Password">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is my first Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the top navigation strip */
+        .nav-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            color: white;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-strip button {
+            background-color: transparent;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-strip button:hover {
+            background-color: #555;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0.5;
+            margin-left: auto;
+            margin-right: 10%;
+            
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            outline: none;
+        
+        }
+
+        .search-container button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #555;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-container button:hover {
+            background-color: #777;
+        }
+
+        .center-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-button, .registration-button {
+            margin-top: 20px;
+            padding: 8px 16px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .login-button {
+            background-color: rgb(96, 9, 9);
+        }
+
+        .login-button:hover {
+            background-color: rgb(41, 193, 33);
+        }
+
+        .registration-button {
+            background-color: rgb(41, 193, 33);
+        }
+
+        .registration-button:hover {
+            background-color: rgb(96, 9, 9);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+        }
+
+
+        .button-link {
+            position: absolute;
+            top: 70px;
+            right: 300px;
+            background-color: #007BFF; /* Button color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3; /* Hover color */
+        }
+    </style>
+        <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQP9L4PXLV"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-DQP9L4PXLV');
+   </script>
+    
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <!-- Navigation Strip -->
+    <div class="nav-strip">
+        <!-- Search Feature in the Center -->
+        <div class="search-container">
+            <input type="text" placeholder="Search..." aria-label="Search">
+            <button type="button">Search</button>
+        </div>
+
+        <!-- Navigation Buttons on the Right Side -->
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.location.href='features.html'">Features</button>
+            <button onclick="window.location.href='products.html'">Products</button>
+            <button onclick="window.location.href='about.html'">About Us</button>
+            <button onclick="window.location.href='contact.html'">Contact</button>
+        </div>
+    </div>
+
+    <!-- Login and Registration Buttons Below the Navigation Strip -->
+    <div class="button-container">
+        <button class="login-button" onclick="window.location.href='login.html'">Institute Login</button>
+        <button id="registration-button" class="registration-button" onclick="window.location.href='register.html';">Register</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="center-container">
+        <h1 id="typewriter">Welcome To Our Platform !!!</h1>
+        
+        <div class="headline"> 
+            <h4>One Stop Solution for Institute</h4>
+        </div> 
+    </div>
+    <a class = "button-link" href="https://collegedunia.com/"  target="_blank" >College Search Platform</a>
+
+    
+    <div class="vision">
+        <h2>  Purpose and Goals:   </h2>
+    </div>
+    <div class="Purpose">
+        <h3>   Purpose:  </h3>
+        <p>The primary objective of the platform is to create a comprehensive online marketplace that bridges the gap between schools and various vendors. The platform will serve as a centralized hub where educational institutions can access and procure a wide range of products and services required for their operations. These include online test platforms, educational materials, physical supplies, and more.</p>
+
+    </div>
+ <!----   <img width="800" height="400"  src="babasaheb.png" alt=""> -->
+
+
+    <div class="Goals">
+        <h3>Goals:</h3>
+        <p>This platform aims to connect educational institutions with a wide range of vendors, making it easy to source products and services, enhance efficiency, support local vendors, and ensure quality through reliable reviews and ratings.</p>
+        <h4> Facilitate Collaboration:</h4>
+        <p>Enable seamless interaction between schools and vendors, simplifying the procurement process.</p>
+        <h4>Enhance Efficiency:</h4> 
+        <p>Streamline the process of sourcing and managing various educational resources and services.</p>
+        <h4>Provide Comprehensive Solutions:</h4>
+        <p>Offer a diverse range of products and services, including both digital and physical items, to meet the varied needs of educational institutions.</p>
+        <h4>Support Local Vendors:</h4>
+        <p>Provide a platform for vendors to reach a broader audience and grow their business by connecting them with schools and other educational entities.</p>
+        <h4>Ensure Quality and Reliability:</h4>    
+        <p>Implement a rating and review system to ensure that only reputable vendors are featured on the platform.</p>
+    </div>
+
+    <!-- Typewriter Effect Section -->
+    <div class="center-container">
+        <h1 id="typewriter">Welcome To Our Platform !!!</h1>
+    </div>
+       
+
+</body>
+</html>
